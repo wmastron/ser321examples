@@ -70,11 +70,11 @@ task runFrac(type: JavaExec) {
   if (project.hasProperty("Pnum") && project.hasProperty("Pdenom")) {
     args(project.getProperty('Pnum'), project.getProperty('Pdenom'));
   } else if (project.hasProperty("Pnum")) {
-    args(project.getProperty('Pnum'), 3);
+    args(project.getProperty('Pnum'), '3');
   } else if (project.hasProperty('Pdenom')){
-    args(4, project.getProperty('Pdenom'));
+    args('4', project.getProperty('Pdenom'));
   } else {
-    args(3, 4)
+    args('3', '4')
   }
 }
 // Example how you can add that libraries can be pulled from mavenCentral()
